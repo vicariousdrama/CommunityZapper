@@ -1,0 +1,68 @@
+{
+    "nostr": {
+        "nsec.comment": "The nsec for the user that will be making the zaps",
+        "nsec": "",
+        "relays.comment": "The list of relays to use",
+        "relays": [
+            {"url": "wss://nostr.pleb.network", "read": true, "write": true},
+            {"url": "wss://nostr-pub.wellorder.net", "read": true, "write": true},
+            {"url": "wss://nostr.mom", "read": true, "write": true},
+            {"url": "wss://relay.nostr.bg", "read": true, "write": true},
+            {"url": "wss://relay.damus.io", "read": true, "write": true},
+            {"url": "wss://nos.lol", "read": true, "write": true},
+            {"url": "wss://nostr.wine", "read": true, "write": false}
+        ],
+        "monitor": [
+            {"owner": "026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27", "dTag":"Outdoors", "zapModerators": [21,19,17,13,11,7,5,3,2,1], "zapContibutors": 100}
+        ]
+    },
+    "lnd": {
+        "address.comment": "The IP address or FQDN to communicate with the LND server over REST",
+        "address": "127.0.0.1",
+        "port.comment": "The port the LND server is listening on for REST",
+        "port": "10080",
+        "macaroon.comment": "The macaroon for authentication and authorization for the LND server in hex format",
+        "macaroon": "0201036C.....",
+        "paymentTimeout.comment": "Time permitted in seconds to complete a payment or expire it",
+        "paymentTimeout": 30,
+        "feeLimit.comment": "Fee limit, in sats, allowed for each payment made",
+        "feeLimit": 2,
+        "connectTimeout.comment": "Time permitted in seconds to connect to LND",
+        "connectTimeout": 5,
+        "readTimeout.comment": "Time permitted in seconds to read all data from LND",
+        "readTimeout": 30,
+        "activeServer.comment": "Indicates the name of a nested LND server configuration to use. This permits quickly changing between configurations",
+        "activeServer": null,
+        "servers.comment": "An array of LND server configurations. Each is expected to have the same fields as described above",
+        "servers": {
+            "testing": {
+                "address": "127.0.0.1",
+                "port": "10080",
+                "macaroon": "0201036C.....",
+                "paymentTimeout": 30,
+                "feeLimit": 2,
+                "connectTimeout": 5,
+                "readTimeout": 30
+            },
+            "mainnet": {
+                "address": "127.0.0.2",
+                "port": "10080",
+                "macaroon": "0201036C.....",
+                "paymentTimeout": 30,
+                "feeLimit": 2,
+                "connectTimeout": 5,
+                "readTimeout": 30
+            }
+        }
+    },
+    "lnurl": {
+        "connectTimeout.comment": "Time permitted in seconds to connect to LN URL Providers",
+        "connectTimeout": 5,
+        "readTimeout.comment": "Time permitted in seconds to read all data from LN URL Providers",
+        "readTimeout": 30,
+        "denyProviders.comment": "Domains for which zaps will not be paid",
+        "denyProviders": [
+            "zeuspay.com"
+        ]
+    }
+}
