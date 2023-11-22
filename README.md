@@ -1,6 +1,8 @@
 # Community Zapper
 
-This script monitors a defined list of communities and will zap moderators and users who post notes in the communities that are approved.
+The [main script](#community-zapper) monitors a defined list of communities and will zap moderators and users who post notes in the communities that are approved.
+
+An [auxiliary script](#listing-communities) can be run with the same configuration to produce a list of all communities you can see, reporting on the name of community, owning pubkey, and description
 
 ## Preparation of Python Environment
 
@@ -48,18 +50,7 @@ The `monitor` value is another array of definitions representing the communities
 - zapContributors: An amount to zap a poster of a note in the community when their note is approved by a moderator
 - zapContributorMsg: a message to send the pubkey that posted the originating note
 
-A common challenge you may face is identifying the owner pubkey and dTag for a Community you want to reward with zaps.
-
-If you have the user's npub, you can get the hex format by running the following, replacing my sample npub with that of the user you want to use (all on one line)
-
-```sh
-~/.pyenv/communityzapper/bin/python -c 'import libutils; print(libutils.normalizeToHex("npub1yx6pjypd4r7qh2gysjhvjd9l2km6hnm4amdnjyjw3467fy05rf0qfp7kza"))'
-```
-
-you may be able to get the dTag and owner npub for communities by using some of the following web clients:
-- https://nostrudel.ninja
-- https://satellite.earth
-
+A common challenge you may face is identifying the owner pubkey and dTag for a Community you want to reward with zaps.  You can run the [List of Communities](#listing-communities) script to discover communities and get the necessary data
 
 ### Lightning Configuration
 
@@ -120,11 +111,14 @@ The `lnurl` configuration section has these keys
 | --- | --- |
 | connectTimeout | Time permitted in seconds to connect to LN Url Providers |
 | readTimeout | Time permitted in seconds to read all data from LN Url Providers |
+| allowProviders | An optional list of domains hosting LN URL providers to only send payments to |
 | denyProviders | An optional list of domains hosting LN URL Providers that will not receive payouts |
 
 The `connectTimeout` is the number of seconds to allow for making a connection to a LN Url Provider.
 
 The `readTimeout` is the number of seconds to allow reading all data from a LN Url Provider.
+
+The `allowProviders` is an array of strings containing entries of the only domain names you want to send zaps to.  If this list contains 1 or more entries, then only the listed domains are valid.  Users with lightning addresses not on the domain list will be denied payment.
 
 The `denyProviders` is an array of strings containing entries of domain names for LN Url Providers that should not receive zaps even if they support it. This is helpful to exclude domains that are problematic with respect to HTLCs and may result in channel closures or loss of funds.
 
@@ -134,4 +128,12 @@ Once configured, run the bot using the previously established virtual environmen
 
 ```sh
 ~/.pyenv/communityzapper/bin/python communityzapper.py
+```
+
+## Listing Communities
+
+Once an nsec and relays are configured, you can run this script to discover communities, which will provide you the needed information for owner and dTag for monitoring
+
+```sh
+~/.pyenv/communityzapper/bin/python listofcommunities.py
 ```

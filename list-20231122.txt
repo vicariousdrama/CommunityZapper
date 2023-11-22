@@ -1,0 +1,747 @@
+---
+Community: hayloo
+  description: Later
+  owner:       369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838
+  dTag:        hayloo
+  aTag:        34550:369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838:hayloo
+---
+Community: crypto
+  description: Cryptonization
+  owner:       369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838
+  dTag:        crypto
+  aTag:        34550:369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838:crypto
+---
+Community: Vegan_Consciousness
+  description: This community is for vegan and conscious people, a pool for exchange and mutual support. Let's make a difference together on Nostr 🦚
+  owner:       c69b71dc564fdc350acddff929f25d7202ac1470c87488608bd6d98e426ba763
+  dTag:        Vegan_Consciousness
+  aTag:        34550:c69b71dc564fdc350acddff929f25d7202ac1470c87488608bd6d98e426ba763:Vegan_Consciousness
+---
+Community: bitcoin
+  description: Bitcoinization
+  owner:       369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838
+  dTag:        bitcoin
+  aTag:        34550:369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838:bitcoin
+---
+Community: n/bitcoin
+  description: Bitcoinization
+  owner:       369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838
+  dTag:        n/bitcoin
+  aTag:        34550:369649468a2a6367cf9d88107ae9625d711aed9387a731b0ad02eba549f67838:n/bitcoin
+---
+Community: sc-group2
+  description: 
+  owner:       5a02f04bebdd3617cc6314679ad1fbba66b4065c73403d6c4edde83ad91b5570
+  dTag:        sc-group2
+  aTag:        34550:5a02f04bebdd3617cc6314679ad1fbba66b4065c73403d6c4edde83ad91b5570:sc-group2
+---
+Community: Questions
+  description: Post questions, either for help and instructions, or fun and entertainment. All topics are welcome. #Questions #Instructions #Help #Info #Review #Feedback #Opinions
+  owner:       66f962d9b19b6fe095a3ad0e305342489ecc5a1c3a1bc0134bfd988ae5426c70
+  dTag:        Questions
+  aTag:        34550:66f962d9b19b6fe095a3ad0e305342489ecc5a1c3a1bc0134bfd988ae5426c70:Questions
+---
+Community: HealthHubCentral
+  description: HealthHubCentral is a community dedicated to promoting a healthy lifestyle. Our goal is to inspire, educate, and support each other in our health and wellness journeys. We share tips on nutrition, exercise, mental health, and holistic living.
+  owner:       52f5a29919f03ad8589e70f45845a161eba676cc1895cdcd0152d7171ee99110
+  dTag:        HealthHubCentral
+  aTag:        34550:52f5a29919f03ad8589e70f45845a161eba676cc1895cdcd0152d7171ee99110:HealthHubCentral
+---
+Community: HistoryOfNostr
+  description: This community tells the untold true story of how Governor Chris Christie is the original founder and creator of NOSTR. The history of nostr community documents all interviews, recordings, pictures, and all other facts about Governor Chris Christie's involvement with NOSTR and why Governor Chris Christie gave NOSTR to Jack Dorsey in exchange for Dorseys lunch when they were at Venice beach.
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        HistoryOfNostr
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:HistoryOfNostr
+---
+Community: lesbitcoiners
+  description: Dans le pain baguette nous croyons
+  owner:       1c6b3be353041dd9e09bb568a4a92344e240b39ef5eb390f5e9e821273f0ae6f
+  dTag:        lesbitcoiners
+  aTag:        34550:1c6b3be353041dd9e09bb568a4a92344e240b39ef5eb390f5e9e821273f0ae6f:lesbitcoiners
+---
+Community: NostrUpdates
+  description: Get updates on the latest Nostr news.
+  owner:       efc37e97fa4fad679e464b7a6184009b7cc7605aceb0c5f56b464d2b986a60f0
+  dTag:        NostrUpdates
+  aTag:        34550:efc37e97fa4fad679e464b7a6184009b7cc7605aceb0c5f56b464d2b986a60f0:NostrUpdates
+---
+Community: BitcoinUniversity
+  description: View and discuss the content of Matthew Kratter (Bitcoin University).
+
+This community is unofficial and not endorsed by Matthew Kratter.
+
+View Matthews website here : 
+https://www.bitcoinuniversity.com
+
+Browse his videos here ( I refuse to link to Youtube):
+https://odysee.com/@TraderUniversity
+
+
+
+  owner:       1c9dcd8fd2d2fb879d6f02d6cc56aeefd74a9678ae48434b0f0de7a21852f704
+  dTag:        BitcoinUniversity
+  aTag:        34550:1c9dcd8fd2d2fb879d6f02d6cc56aeefd74a9678ae48434b0f0de7a21852f704:BitcoinUniversity
+---
+Community: Audit
+  description: Free beta-test, website audit and application feedback requests. 
+Request to review your work, either a webpage, blog or and application. 
+  owner:       66f962d9b19b6fe095a3ad0e305342489ecc5a1c3a1bc0134bfd988ae5426c70
+  dTag:        Audit
+  aTag:        34550:66f962d9b19b6fe095a3ad0e305342489ecc5a1c3a1bc0134bfd988ae5426c70:Audit
+---
+Community: Yoga
+  description: This is a place to share about yoga, yoga events and to bring yoga instructors together with people looking to learn from them. 
+  owner:       da19b5d291e06ed09ba545bc5366408dc82ba8c9e9f97d32ea8ea60f1f6cbfaa
+  dTag:        Yoga
+  aTag:        34550:da19b5d291e06ed09ba545bc5366408dc82ba8c9e9f97d32ea8ea60f1f6cbfaa:Yoga
+---
+Community: Coffee
+  description: Similar to https://www.reddit.com/r/Coffee/
+  owner:       8c430bdaadc1a202e4dd11c86c82546bb108d755e374b7918181f533b94e312e
+  dTag:        Coffee
+  aTag:        34550:8c430bdaadc1a202e4dd11c86c82546bb108d755e374b7918181f533b94e312e:Coffee
+---
+Community: Catholic
+  description: A place for Roman Catholics and everyone interested in Catholicism to geek out.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Catholic
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Catholic
+---
+Community: sc-group1
+  description: SCOM test group 1
+  owner:       5a02f04bebdd3617cc6314679ad1fbba66b4065c73403d6c4edde83ad91b5570
+  dTag:        sc-group1
+  aTag:        34550:5a02f04bebdd3617cc6314679ad1fbba66b4065c73403d6c4edde83ad91b5570:sc-group1
+---
+Community: Why oh why didn't I take the BLUE pill!?!?
+  description: Orange pill, purple pill.
+A place to discuss personal and individual changes/transformations resulting from your Bitcoin and Nostr journey.
+  owner:       6903089d4545113d079f7443ac51393b29e87ac9845a4774b54ad627bd117177
+  dTag:        Why oh why didn't I take the BLUE pill!?!?
+  aTag:        34550:6903089d4545113d079f7443ac51393b29e87ac9845a4774b54ad627bd117177:Whyohwhydidn'tItaketheBLUEpill!?!?
+---
+Community: Einundzwanzig_Rosenheim
+  description: 
+  owner:       e81fbea3dbb1dec5ee24726a555fb0f5b8404fcbdc530edbbb5127e417d39d6e
+  dTag:        Einundzwanzig_Rosenheim
+  aTag:        34550:e81fbea3dbb1dec5ee24726a555fb0f5b8404fcbdc530edbbb5127e417d39d6e:Einundzwanzig_Rosenheim
+---
+Community: USnews
+  description: News and politics from North America, especially USA.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        USnews
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:USnews
+---
+Community: 
+  description: Testing
+  owner:       d7376efb5a93b926a08357b8f3e64eb34d3bb0dfbff174a2375a28aa7f6f9e53
+  dTag:        
+  aTag:        34550:d7376efb5a93b926a08357b8f3e64eb34d3bb0dfbff174a2375a28aa7f6f9e53:
+---
+Community: Questions
+  description: Post questions, either for help and instructions, or fun and entertainment. All topics are welcome. #Questions #Instructions #Help #Info #Review #Feedback #Opinions
+  owner:       66f962d9b19b6fe095a3ad0e305342489ecc5a1c3a1bc0134bfd988ae5426c70
+  dTag:        Questions
+  aTag:        34550:66f962d9b19b6fe095a3ad0e305342489ecc5a1c3a1bc0134bfd988ae5426c70:Questions
+---
+Community: Euronews
+  description: News about EU and Europe.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Euronews
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Euronews
+---
+Community: Germanstuff
+  description: News and complaints and stuff about German-speaking countries. Occasionally "auf Deutsch".
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Germanstuff
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Germanstuff
+---
+Community: antiwork
+  description: A community for those who want to end work, are curious about ending work, want to get the most out of a work-free life, want more information on anti-work ideas and want personal help with their own jobs/work-related struggles.
+  owner:       c3d14dff29e33347bb242900bc43f1c429d112db65d7329a71d71b98d1cce6e9
+  dTag:        antiwork
+  aTag:        34550:c3d14dff29e33347bb242900bc43f1c429d112db65d7329a71d71b98d1cce6e9:antiwork
+---
+Community: antiwork
+  description: A community for those who want to end work, are curious about ending work, want to get the most out of a work-free life, want more information on anti-work ideas and want personal help with their own jobs/work-related struggles.
+  owner:       c3d14dff29e33347bb242900bc43f1c429d112db65d7329a71d71b98d1cce6e9
+  dTag:        antiwork
+  aTag:        34550:c3d14dff29e33347bb242900bc43f1c429d112db65d7329a71d71b98d1cce6e9:antiwork
+---
+Community: AskNostr
+  description: Testing
+  owner:       d7376efb5a93b926a08357b8f3e64eb34d3bb0dfbff174a2375a28aa7f6f9e53
+  dTag:        AskNostr
+  aTag:        34550:d7376efb5a93b926a08357b8f3e64eb34d3bb0dfbff174a2375a28aa7f6f9e53:AskNostr
+---
+Community: NostrRPG
+  description: Community focused on enabling D&D and other pen & paper style RPGs for the Nostr community.
+
+This can be a place to post about games you host, looking for games to join, talk about your sessions and the fun stories or even just network with others who play.
+  owner:       444eaf65c2d35511fd0dbdbb0fe3c74139fcd144de00d22d57819ae5fdc76ae8
+  dTag:        NostrRPG
+  aTag:        34550:444eaf65c2d35511fd0dbdbb0fe3c74139fcd144de00d22d57819ae5fdc76ae8:NostrRPG
+---
+Community: CodeHearted
+  description: - "Welcome to CodeHearted, a unique community where the worlds of coding and romance converge. Here, we believe that the art of coding goes beyond just algorithms and data structures; it's a journey filled with passion, creativity, and the human touch. CodeHearted is a place for those who see poetry in lines of code and seek to infuse their tech creations with emotion and depth.
+    
+    Our purpose is to explore the more whimsical and heartfelt side of technology. Whether you're developing apps that connect people, writing code that tells a romantic story, or simply looking for a space where your love for coding and affectionate creativity can coexist, CodeHearted is your digital home.
+    
+    We encourage sharing of projects that marry technology with emotional expression, discussions about the human aspect of tech, and explorations of how code can bring us closer in our human relationships. From algorithmic love letters to apps that help express affection, CodeHearted is for those who code with love and love to code."
+  owner:       52f5a29919f03ad8589e70f45845a161eba676cc1895cdcd0152d7171ee99110
+  dTag:        CodeHearted
+  aTag:        34550:52f5a29919f03ad8589e70f45845a161eba676cc1895cdcd0152d7171ee99110:CodeHearted
+---
+Community: Classicalconvos
+  description: For everyone who thinks daily about the Romans.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Classicalconvos
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Classicalconvos
+---
+Community: RostockEuhlen
+  description: test
+  owner:       83794dfe51d2b27601897f8b735abef0afc1dd09515f97a5fe2032c1e46c6636
+  dTag:        RostockEuhlen
+  aTag:        34550:83794dfe51d2b27601897f8b735abef0afc1dd09515f97a5fe2032c1e46c6636:RostockEuhlen
+---
+Community: Outdoors
+  description: Notes about nature, hiking, and outdoorsy stuff.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Outdoors
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Outdoors
+---
+Community: Filmmaking
+  description: A place to discuss filmmaking, for plebs and plebs, newbies and veterans. 
+  owner:       693c2832de939b4af8ccd842b17f05df2edd551e59989d3c4ef9a44957b2f1fb
+  dTag:        Filmmaking
+  aTag:        34550:693c2832de939b4af8ccd842b17f05df2edd551e59989d3c4ef9a44957b2f1fb:Filmmaking
+---
+Community: AskNostr
+  description: Find answers to your questions. Assist others in resolving theirs. All questions welcome! Even if it's not about Nostr! 
+
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        AskNostr
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:AskNostr
+---
+Community: Economics
+  description: Anything to do with money and monetary policy, charting and trends, production of goods and services, or measurements.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Economics
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Economics
+---
+Community: EducationDecentralized
+  description: Discuss education, the philosophies, the methods and the tools that could be envisioned to decentralize its process.
+  owner:       693c2832de939b4af8ccd842b17f05df2edd551e59989d3c4ef9a44957b2f1fb
+  dTag:        EducationDecentralized
+  aTag:        34550:693c2832de939b4af8ccd842b17f05df2edd551e59989d3c4ef9a44957b2f1fb:EducationDecentralized
+---
+Community: Economics
+  description: Anything to do with money and monetary policy, charting and trends, production of goods and services, or measurements.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Economics
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Economics
+---
+Community: #TestCheeseCommunity
+  description: #Test
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        #TestCheeseCommunity
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:#TestCheeseCommunity
+---
+Community: Complexity
+  description: A community for the discussion of complexity and emergent processes: Ecosystems, biology, society, cybernetics etc.
+  owner:       dc4cd086cd7ce5b1832adf4fdd1211289880d2c7e295bcb0e684c01acee77c06
+  dTag:        Complexity
+  aTag:        34550:dc4cd086cd7ce5b1832adf4fdd1211289880d2c7e295bcb0e684c01acee77c06:Complexity
+---
+Community: tardance
+  description: 🚫🧠
+🤸🥳music4smoothbrains
+2dance2🥳🤸
+🚫🧠 Strictly 🚫🧠 no IDM 🚫🧠
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        tardance
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:tardance
+---
+Community: catpictrue
+  description: 
+  owner:       39faf95e8c039436d91a0ab13c50376d0e17be94a79eec5e92616e9b1fd293dd
+  dTag:        catpictrue
+  aTag:        34550:39faf95e8c039436d91a0ab13c50376d0e17be94a79eec5e92616e9b1fd293dd:catpictrue
+---
+Community: Damus
+  description: Community for Damus users, and for people who want to interact with Damus users
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        Damus
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:Damus
+---
+Community: nostrfr
+  description: Communauté francophone sur Nostr
+#nostrfr pour nous retrouver
+  owner:       9a576bd96047d9884a93abb2bb0446092b9a1bc773a452143e7f465e538775f4
+  dTag:        nostrfr
+  aTag:        34550:9a576bd96047d9884a93abb2bb0446092b9a1bc773a452143e7f465e538775f4:nostrfr
+---
+Community: MusicCommunity
+  description: Listening, Making
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        MusicCommunity
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:MusicCommunity
+---
+Community: España
+  description: 
+  owner:       62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43
+  dTag:        España
+  aTag:        34550:62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43:España
+---
+Community: Gaming
+  description: All things gaming. News, memes, topics, guides, events, etc
+  owner:       3cea4806b1e1a9829d30d5cb8a78011d4271c6474eb31531ec91f28110fe3f40
+  dTag:        Gaming
+  aTag:        34550:3cea4806b1e1a9829d30d5cb8a78011d4271c6474eb31531ec91f28110fe3f40:Gaming
+---
+Community: RedditorsParadise
+  description: We are a community of nostriches keen on helping Redditors familiarize themselves with this open, censorship-resistant communications protocol.
+  owner:       7f5c2b4e48a0e9feca63a46b13cdb82489f4020398d60a2070a968caa818d75d
+  dTag:        RedditorsParadise
+  aTag:        34550:7f5c2b4e48a0e9feca63a46b13cdb82489f4020398d60a2070a968caa818d75d:RedditorsParadise
+---
+Community: SailfishES
+  description: Comunidad en español para todo lo relacionado con SailfishOS y Jolla. https://sailfishos.org/
+
+
+Foro --> https://forum.sailfishos.org/
+  owner:       ba31f050a66d6aee73fb258405a44fcffa662e24784e6650944f8fc2d3089427
+  dTag:        SailfishES
+  aTag:        34550:ba31f050a66d6aee73fb258405a44fcffa662e24784e6650944f8fc2d3089427:SailfishES
+---
+Community: Discuss
+  description: #Discuss
+
+Start a discussion or post a link to a discussion you've found for people to join.
+
+Started (yet another) Community, this one is to share interesting discussions / points of discussion. Especially ones that go under the radar.
+
+I think a lot of interesting discussions on nostr can get lost as they're not trending / z4pped, so thought this could be a good idea ¯\_(ツ)_/¯
+
+Let's see.
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        Discuss
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:Discuss
+---
+Community: TheDonald
+  description: DonaldTrump
+  owner:       37a48adbec90a5a3e4bbb4420580ac744c4748d6638912ecc3737051c344d64b
+  dTag:        TheDonald
+  aTag:        34550:37a48adbec90a5a3e4bbb4420580ac744c4748d6638912ecc3737051c344d64b:TheDonald
+---
+Community: TheRealBookClub
+  description: A place to read and discuss literature and ideas of all types, with a preference for the dissident scholar and controversial topics.
+  owner:       fc8cdfb46039e82eed3699d56f0b12857e3824ae258772e63705577b9cacf88d
+  dTag:        TheRealBookClub
+  aTag:        34550:fc8cdfb46039e82eed3699d56f0b12857e3824ae258772e63705577b9cacf88d:TheRealBookClub
+---
+Community: Chattogether
+  description: Chat during your Nest !
+  owner:       d0bf8568d6f025f4f6ad0700c64230a0bea238a72fc2396a334baa8f4db3e76f
+  dTag:        Chattogether
+  aTag:        34550:d0bf8568d6f025f4f6ad0700c64230a0bea238a72fc2396a334baa8f4db3e76f:Chattogether
+---
+Community: python
+  description: A community for anyone interested in learning or exploring the world of Python code. All skill levels are welcome!
+
+Banner image modified from Freepik.com
+  owner:       c80b5248fbe8f392bc3ba45091fb4e6e2b5872387601bf90f53992366b30d720
+  dTag:        python
+  aTag:        34550:c80b5248fbe8f392bc3ba45091fb4e6e2b5872387601bf90f53992366b30d720:python
+---
+Community: entrepreneurs
+  description: A community for entrepreneurs.
+  owner:       62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43
+  dTag:        entrepreneurs
+  aTag:        34550:62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43:entrepreneurs
+---
+Community: HeavenThreads
+  description: 🕊️it's a vibe
+
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        HeavenThreads
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:HeavenThreads
+---
+Community: opensource
+  description: Open source hardware & software for a more OPEN tomorrow.
+  owner:       2a57f17442501c1a874ab64796501e0eabeafa8f7280c49e4e31630bac2fd330
+  dTag:        opensource
+  aTag:        34550:2a57f17442501c1a874ab64796501e0eabeafa8f7280c49e4e31630bac2fd330:opensource
+---
+Community: BitMeet
+  description: Organizing a Bitcoin or Nostr meetup? Post details here for your event to become easily discoverable.
+  owner:       7f5c2b4e48a0e9feca63a46b13cdb82489f4020398d60a2070a968caa818d75d
+  dTag:        BitMeet
+  aTag:        34550:7f5c2b4e48a0e9feca63a46b13cdb82489f4020398d60a2070a968caa818d75d:BitMeet
+---
+Community: Feira Nostr
+  description: O primeiro Marketplace no Nostr (eu acho)
+  owner:       b70c9bfb254b6072804212643beb077b6ba941609ed40515d9b10961d7767899
+  dTag:        Feira Nostr
+  aTag:        34550:b70c9bfb254b6072804212643beb077b6ba941609ed40515d9b10961d7767899:FeiraNostr
+---
+Community: CryptoPioneers
+  description: CryptoPioneers is a community dedicated to exploring and discussing the latest developments in cryptocurrency and blockchain technology. Our purpose is to create a collaborative space for enthusiasts, developers, investors, and newcomers to share insights, discuss trends, and foster a deeper understanding of decentralized technologies. Whether you're interested in the technical details of blockchain, the dynamics of crypto markets, or the impact of decentralized finance (DeFi) on traditional systems, CryptoPioneers is your go-to community. We encourage open discussions, sharing of ideas, and respectful debates to advance our collective knowledge and appreciation of the crypto world.
+  owner:       1e29761df809b8ff1ec8099c0add93c17fd35cb0486db88d5937a3c470e45e3d
+  dTag:        CryptoPioneers
+  aTag:        34550:1e29761df809b8ff1ec8099c0add93c17fd35cb0486db88d5937a3c470e45e3d:CryptoPioneers
+---
+Community: Relays
+  description: Let's talk about Nostr relays. 
+  owner:       f675fd2c3e396ee74f88dc7fa16d094a6f1d17ec79c89e3a55a2ae9fdf148bcc
+  dTag:        Relays
+  aTag:        34550:f675fd2c3e396ee74f88dc7fa16d094a6f1d17ec79c89e3a55a2ae9fdf148bcc:Relays
+---
+Community: HellThreads
+  description: Come create and participate in hell threads! Wanna fight,  talk shit,  joke around? Do it here.  No topic off limits. 
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        HellThreads
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:HellThreads
+---
+Community: anime
+  description: Anime discussion and reviews 
+  owner:       1f437e94e8c0b67520a9a1a8cc740aab16adfaa1076acc4a782befc274df8480
+  dTag:        anime
+  aTag:        34550:1f437e94e8c0b67520a9a1a8cc740aab16adfaa1076acc4a782befc274df8480:anime
+---
+Community: android
+  description: The goal of this community is to become the best place on Nostr for Android related news, Android devices, and Android applications.
+  owner:       3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24
+  dTag:        android
+  aTag:        34550:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:android
+---
+Community: THQuote
+  description: Thai Quote #THQuote
+
+ผมคิดว่า การนำสำนวน หรือ คำพังเพย มาให้รู้จักกันไว้ น่าจะมีประโยชน์ไม่มากก็น้อย โดยเฉพาะกับชาวต่างชาติ เพื่อให้เค้าได้เข้าใจใน พื้นฐานความคิดของคนไทยในอดีต ทั้งนี้บางสำนวน สำหรับบางท่าน อาจจะเห็นว่า ล้าสมัย หรือมีความเห็นต่างสำหรับยุคสมัยในปัจจุบัน ก็สามารถแสดงความเห็น เพิ่มเติม เพื่อประโยชน์แก่สังคมโลก ครับ
+
+Reason to have Thai Quote (#THQuote) here, I would like to spread the meaning of it for Foreigners to understand Thai people more, especially the original thought of predecessor. However, if you thought it's outdated please share your idea or comment.
+It might help our world's community :)
+
+  owner:       6e0cebd7424165acfe9252674758c4f59938df2c75e8cc715e5f3761f646a8e4
+  dTag:        THQuote
+  aTag:        34550:6e0cebd7424165acfe9252674758c4f59938df2c75e8cc715e5f3761f646a8e4:THQuote
+---
+Community: WorldNews
+  description: Globally-significant stories, particularly those from outside of North America and Europe.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        WorldNews
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:WorldNews
+---
+Community: Hang Glider Pilots
+  description: A group for hang glider pilots.
+  owner:       30782a8323b7c98b172c5a2af7206bb8283c655be6ddce11133611a03d5f1177
+  dTag:        Hang Glider Pilots
+  aTag:        34550:30782a8323b7c98b172c5a2af7206bb8283c655be6ddce11133611a03d5f1177:HangGliderPilots
+---
+Community: DrunkPosting
+  description: A community for top quality liquor lovers!
+  owner:       7b2d73a3ac9714b06500005454b1b24ff255304eb488076822122101d0fcf7a2
+  dTag:        DrunkPosting
+  aTag:        34550:7b2d73a3ac9714b06500005454b1b24ff255304eb488076822122101d0fcf7a2:DrunkPosting
+---
+Community: UtahBitcoin
+  description: Community for Utah based bitcoiners to discuss and share ideas about bitcoin and nostr.
+  owner:       11d0b66747887ba9a6d34b23eb31287374b45b1a1b161eac54cb183c53e00ef7
+  dTag:        UtahBitcoin
+  aTag:        34550:11d0b66747887ba9a6d34b23eb31287374b45b1a1b161eac54cb183c53e00ef7:UtahBitcoin
+---
+Community: Jokestr
+  description: A home for all jokes, good and bad.
+  owner:       15ec36dd52925f2c86743a1b1a92b30138ca35ce5419e235db85b0578d93b3bc
+  dTag:        Jokestr
+  aTag:        34550:15ec36dd52925f2c86743a1b1a92b30138ca35ce5419e235db85b0578d93b3bc:Jokestr
+---
+Community: Friends
+  description: 
+  owner:       8b9fbf6de8d825925d167129d6ba5eab01c45f02fdff36f7c73f9dbec28b9839
+  dTag:        Friends
+  aTag:        34550:8b9fbf6de8d825925d167129d6ba5eab01c45f02fdff36f7c73f9dbec28b9839:Friends
+---
+Community: BelgianBitcoinEmbassy
+  description: Op 3 januari 2009 lanceerde een anonieme computer programmeur met de schuilnaam Satoshi Nakamoto de software van het vandaag alomtegenwoordige Bitcoin netwerk. Niemand (zelfs Satoshi zelf niet) kon vermoeden dat 12 jaar later dit netwerk zou evolueren tot een monetair fenomeen van wereldformaat. Hier bij Belgian Bitcoin Embassy stellen wij ons als doelstelling om een algemeen aanspreekpunt te kunnen bieden voor elke belgische burger met interesse of vragen over dit onderwerp.
+
+https://belgianbitcoinembassy.org/
+http://t.me/BelgianBitcoinEmbassy
+  owner:       6d3a6f98f5ec81e05093af0fad94c89ee1040298d59724ef9a02dde976eaadc5
+  dTag:        BelgianBitcoinEmbassy
+  aTag:        34550:6d3a6f98f5ec81e05093af0fad94c89ee1040298d59724ef9a02dde976eaadc5:BelgianBitcoinEmbassy
+---
+Community: Siamstr
+  description: Nostr community for #Thai people and all foreign friends.
+- Don't Spam
+- Don't scam
+Honor, Respect, Help and Share knowledge.
+  owner:       cca7ef541db83689413d975c4f6a35e4ec73915a2596c770412d9286e7323176
+  dTag:        Siamstr
+  aTag:        34550:cca7ef541db83689413d975c4f6a35e4ec73915a2596c770412d9286e7323176:Siamstr
+---
+Community: christianostr
+  description: Exalting the Lord Jesus Christ on Nostr.
+  owner:       48ccd2478aad46f881cfbb3df387f1454e800c3f92ab1d15c888d1b4fa5aa77c
+  dTag:        christianostr
+  aTag:        34550:48ccd2478aad46f881cfbb3df387f1454e800c3f92ab1d15c888d1b4fa5aa77c:christianostr
+---
+Community: Nostr中文社区
+  description: 欢迎来到 Nostr 中文社区，这里鼓励为刚加入的新人做科普、答疑、教程等，同时也记录发展 Nostr 中文社区的想法，包括技术、产品、运营等等
+  owner:       45c41f21e1cf715fa6d9ca20b8e002a574db7bb49e96ee89834c66dac5446b7a
+  dTag:        Nostr中文社区
+  aTag:        34550:45c41f21e1cf715fa6d9ca20b8e002a574db7bb49e96ee89834c66dac5446b7a:Nostr中文社区
+---
+Community: sandiego
+  description: A place to post anything that has to do with San Diego CA. San Diego is the 8th largest city in the US and is located in the southwest corner of the contiguous United States. It is known for its mild climate and hosts the busiest border crossing in the world. 
+  owner:       22f22e98a035b8ff97d4cc4c5b34e65ccecae258430eeca46b17b1e8aabb8a5e
+  dTag:        sandiego
+  aTag:        34550:22f22e98a035b8ff97d4cc4c5b34e65ccecae258430eeca46b17b1e8aabb8a5e:sandiego
+---
+Community: History
+  description: A place for fellow history lovers.
+  owner:       7b2d73a3ac9714b06500005454b1b24ff255304eb488076822122101d0fcf7a2
+  dTag:        History
+  aTag:        34550:7b2d73a3ac9714b06500005454b1b24ff255304eb488076822122101d0fcf7a2:History
+---
+Community: Sweden
+  description: Welcome to Sweden, everyone is welcomed here!
+  owner:       76a54d782523608fa2214357c06d675aa30423498f4b799ea9f9b32105bdab44
+  dTag:        Sweden
+  aTag:        34550:76a54d782523608fa2214357c06d675aa30423498f4b799ea9f9b32105bdab44:Sweden
+---
+Community: Art
+  description: This is the community of all 'non-digital' Art lovers.
+  owner:       f4db5270bd991b17bea1e6d035f45dee392919c29474bbac10342d223c74e0d0
+  dTag:        Art
+  aTag:        34550:f4db5270bd991b17bea1e6d035f45dee392919c29474bbac10342d223c74e0d0:Art
+---
+Community: orangemart
+  description: 
+  owner:       1ad8f5d35eeef24dd6e8d93f24bedb26cf4b072a6c136bcdd9293ecdbb624486
+  dTag:        orangemart
+  aTag:        34550:1ad8f5d35eeef24dd6e8d93f24bedb26cf4b072a6c136bcdd9293ecdbb624486:orangemart
+---
+Community: movies
+  description: 🍿🍿🍿🍿🍿
+
+movies / TV / films / trailers / kino / reviews / links etc etc
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        movies
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:movies
+---
+Community: Portugal
+  description: ₿ ⚡ ℕ 🇵🇹 🇪🇺 🌐 ☀️ 🌌
+  owner:       d6dc95542e18b8b7aec2f14610f55c335abebec76f3db9e58c254661d0593a0c
+  dTag:        Portugal
+  aTag:        34550:d6dc95542e18b8b7aec2f14610f55c335abebec76f3db9e58c254661d0593a0c:Portugal
+---
+Community: MusicCommunity
+  description: Listening, Making
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        MusicCommunity
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:MusicCommunity
+---
+Community: BitcoinHispano
+  description: Bienvenidos a todos los bitcoiners de la lengua de Cervantes!
+  owner:       b03c82b72e9c973338b532408ead45a4759ca2de81bea4b437e1659c8492a7f2
+  dTag:        BitcoinHispano
+  aTag:        34550:b03c82b72e9c973338b532408ead45a4759ca2de81bea4b437e1659c8492a7f2:BitcoinHispano
+---
+Community: Spain
+  description: 
+  owner:       62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43
+  dTag:        Spain
+  aTag:        34550:62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43:Spain
+---
+Community: Music
+  description: A community for music lovers 
+  owner:       605bf3430768ebba1dedac592adbafce9db82c4235d98c8f7ffdef4d948b9dda
+  dTag:        Music
+  aTag:        34550:605bf3430768ebba1dedac592adbafce9db82c4235d98c8f7ffdef4d948b9dda:Music
+---
+Community: HellThreads
+  description: Come create and participate in hell threads! Wanna fight,  talk shit,  joke around? Do it here.  No topic off limits. 
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        HellThreads
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:HellThreads
+---
+Community: AUStriches
+  description:  #bitcoin, #nostr and the nanny state on the prisoner isle!
+  owner:       6efb74e66b7ed7fb9fb7b8b8f12e1fbbabe7f45823a33a14ac60cc9241285536
+  dTag:        AUStriches
+  aTag:        34550:6efb74e66b7ed7fb9fb7b8b8f12e1fbbabe7f45823a33a14ac60cc9241285536:AUStriches
+---
+Community: España
+  description: 
+  owner:       62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43
+  dTag:        España
+  aTag:        34550:62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43:España
+---
+Community: fossdroid
+  description: A community for sharing and promoting free / libre and open source software on the Android platform. This means software you are free to modify and distribute, such as applications licensed under the GNU General Public License, BSD license, MIT license, Apache license, etc. and software that isn’t designed to restrict you in any way. Think of free software as free as in freedom of speech, not free beer.
+  owner:       d0debf9fb12def81f43d7c69429bb784812ac1e4d2d53a202db6aac7ea4b466c
+  dTag:        fossdroid
+  aTag:        34550:d0debf9fb12def81f43d7c69429bb784812ac1e4d2d53a202db6aac7ea4b466c:fossdroid
+---
+Community: Éire
+  description: Topics and discussions relevant to the emerald isle. 
+  owner:       1c9dcd8fd2d2fb879d6f02d6cc56aeefd74a9678ae48434b0f0de7a21852f704
+  dTag:        Éire
+  aTag:        34550:1c9dcd8fd2d2fb879d6f02d6cc56aeefd74a9678ae48434b0f0de7a21852f704:Éire
+---
+Community: obsidian
+  description: Discussion about Obsidian. Obsidian is the private and flexible note‑taking app that adapts to the way you think. Share your workflows, tips and tricks, interesting screenshots, second brain setups and anything related to Obsidian. 
+
+https://obsidian.md
+
+  owner:       deba271e547767bd6d8eec75eece5615db317a03b07f459134b03e7236005655
+  dTag:        obsidian
+  aTag:        34550:deba271e547767bd6d8eec75eece5615db317a03b07f459134b03e7236005655:obsidian
+---
+Community: ZapStream
+  description: ZapStream Community
+  owner:       6e75f7972397ca3295e0f4ca0fbc6eb9cc79be85bafdd56bd378220ca8eee74e
+  dTag:        ZapStream
+  aTag:        34550:6e75f7972397ca3295e0f4ca0fbc6eb9cc79be85bafdd56bd378220ca8eee74e:ZapStream
+---
+Community: SociedadeAlternativaLibertaria
+  description: A Sociedade Alternativa Libertária busca reunir indivíduos que não defendem a agressão a inocentes.
+  owner:       a0de22ec6b7ccc20512231200e437150cb61fe403a2f4a1a7d6349ffdb4869a5
+  dTag:        SociedadeAlternativaLibertaria
+  aTag:        34550:a0de22ec6b7ccc20512231200e437150cb61fe403a2f4a1a7d6349ffdb4869a5:SociedadeAlternativaLibertaria
+---
+Community: ficticioushomeownersassociation
+  description: The official community page of the ranch.
+  owner:       11d0b66747887ba9a6d34b23eb31287374b45b1a1b161eac54cb183c53e00ef7
+  dTag:        ficticioushomeownersassociation
+  aTag:        34550:11d0b66747887ba9a6d34b23eb31287374b45b1a1b161eac54cb183c53e00ef7:ficticioushomeownersassociation
+---
+Community: bookstr
+  description: All books are open to discussion here.
+  owner:       c060b31fe2bbb0be4d393bc7c40a80848a25b8f0e0f382cb5b49c37bf7476cb4
+  dTag:        bookstr
+  aTag:        34550:c060b31fe2bbb0be4d393bc7c40a80848a25b8f0e0f382cb5b49c37bf7476cb4:bookstr
+---
+Community: History
+  description: A place for fellow history lovers.
+  owner:       7b2d73a3ac9714b06500005454b1b24ff255304eb488076822122101d0fcf7a2
+  dTag:        History
+  aTag:        34550:7b2d73a3ac9714b06500005454b1b24ff255304eb488076822122101d0fcf7a2:History
+---
+Community: Catholic
+  description: A place for Roman Catholics and everyone interested in Catholicism to geek out.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Catholic
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Catholic
+---
+Community: DankDynasty
+  description: The Dankest of Memes
+  owner:       71dfc37ec844026b735cc2c19f0062a2cfcbec44b504fffb4fb7dc958aa83134
+  dTag:        DankDynasty
+  aTag:        34550:71dfc37ec844026b735cc2c19f0062a2cfcbec44b504fffb4fb7dc958aa83134:DankDynasty
+---
+Community: Monero
+  description: 
+  owner:       62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43
+  dTag:        Monero
+  aTag:        34550:62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43:Monero
+---
+Community: AsciiArt
+  description: AsciiArt com
+  owner:       40b9c85fffeafc1cadf8c30a4e5c88660ff6e4971a0dc723d5ab674b5e61b451
+  dTag:        AsciiArt
+  aTag:        34550:40b9c85fffeafc1cadf8c30a4e5c88660ff6e4971a0dc723d5ab674b5e61b451:AsciiArt
+---
+Community: Art
+  description: This is the community of all 'non-digital' Art lovers.
+  owner:       f4db5270bd991b17bea1e6d035f45dee392919c29474bbac10342d223c74e0d0
+  dTag:        Art
+  aTag:        34550:f4db5270bd991b17bea1e6d035f45dee392919c29474bbac10342d223c74e0d0:Art
+---
+Community: RelationshipAdvice
+  description: This community is about all things regarding relationships. Romantic, platonic, and relationships with family. We are here to give and get advice, opinions and ask the community questions about their relationship matters.
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        RelationshipAdvice
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:RelationshipAdvice
+---
+Community: monero
+  description: Monero (XMR), a secure, private, untraceable currency that is open-source and freely available to all.
+  owner:       82a1a95bb604d919763892fce0c4445e7d8f4d0254d94e6b263d8385e30d65ec
+  dTag:        monero
+  aTag:        34550:82a1a95bb604d919763892fce0c4445e7d8f4d0254d94e6b263d8385e30d65ec:monero
+---
+Community: brits
+  description: fish n bloody chips bruv
+  owner:       9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b
+  dTag:        brits
+  aTag:        34550:9ca0bd7450742d6a20319c0e3d4c679c9e046a9dc70e8ef55c2905e24052340b:brits
+---
+Community: ShittyAskNostr
+  description: Ask shitty questions. 
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        ShittyAskNostr
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:ShittyAskNostr
+---
+Community: Germanstuff
+  description: News and complaints and stuff about German-speaking countries. Occasionally "auf Deutsch".
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Germanstuff
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Germanstuff
+---
+Community: lightningnetwork
+  description: A community to discuss Lightning Network news, ask your questions, share with others, and stay current with the LN world ⚡️
+  owner:       4f6728209e922fcf363fa5d20f17b1c16cb2d0a6d44eda02f2de730c907e3054
+  dTag:        lightningnetwork
+  aTag:        34550:4f6728209e922fcf363fa5d20f17b1c16cb2d0a6d44eda02f2de730c907e3054:lightningnetwork
+---
+Community: Libertarians
+  description: 
+  owner:       62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43
+  dTag:        Libertarians
+  aTag:        34550:62a6a41e2f0f8224586215bce21b8d4b1c7f418622e2d476e3978ddab12acb43:Libertarians
+---
+Community: ai-papers
+  description: Discussion of technical artificial intelligence papers, blogs, and github repositories.
+
+If you'd like to be a moderator, please reach out!
+  owner:       da18e9860040f3bf493876fc16b1a912ae5a6f6fa8d5159c3de2b8233a0d9851
+  dTag:        ai-papers
+  aTag:        34550:da18e9860040f3bf493876fc16b1a912ae5a6f6fa8d5159c3de2b8233a0d9851:ai-papers
+---
+Community: Moonshiners&Dtistillers
+  description: Welcome, all ye Moonshiners & Distillers! Here we can chat and exchange ideas, tips, and techniques. Feel free to join and we'll learn together.
+  owner:       0155373ac79b7ffb0f586c3e68396f9e82d46f7afe7016d46ed9ca46ba3e1bed
+  dTag:        Moonshiners&Dtistillers
+  aTag:        34550:0155373ac79b7ffb0f586c3e68396f9e82d46f7afe7016d46ed9ca46ba3e1bed:Moonshiners&Dtistillers
+---
+Community: g
+  description: The letter G. Lowercase g is good too. 
+  owner:       6e468422dfb74a5738702a8823b9b28168abab8655faacb6853cd0ee15deee93
+  dTag:        g
+  aTag:        34550:6e468422dfb74a5738702a8823b9b28168abab8655faacb6853cd0ee15deee93:g
+---
+Community: #EyeCandy
+  description: Only Eye Candies
+  owner:       dfd9d9270579a5c942001400701d84903ce5d393c5989e2c53dd168ccabf9de8
+  dTag:        #EyeCandy
+  aTag:        34550:dfd9d9270579a5c942001400701d84903ce5d393c5989e2c53dd168ccabf9de8:#EyeCandy
+---
+Community: wordfootball
+  description: ⚽️⚽️!!
+  owner:       491afebaddb02bde87cfe77fedaff014bf92d8694a1d380ec4e754918b64834e
+  dTag:        wordfootball
+  aTag:        34550:491afebaddb02bde87cfe77fedaff014bf92d8694a1d380ec4e754918b64834e:wordfootball
+---
+Community: Slowfood
+  description: Cooking, baking and recipes.
+  owner:       026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27
+  dTag:        Slowfood
+  aTag:        34550:026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27:Slowfood
+---
+Community: Nostr Projects and Tools
+  description: Nostr community for developers and creators to post their nostr projects, tools, apps, and ideas. 
+  owner:       66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4
+  dTag:        Nostr Projects and Tools
+  aTag:        34550:66d44ec09664f9c8f2fcd3ab474dcdd063f231408da7ab46453c82b43da6ffb4:NostrProjectsandTools

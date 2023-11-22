@@ -1,17 +1,13 @@
-from collections import OrderedDict
 from logging.handlers import RotatingFileHandler
-from nostr.event import Event, EventKind, EncryptedDirectMessage, AuthMessage
+from nostr.event import Event
 from nostr.filter import Filter, Filters
 from nostr.message_type import ClientMessageType
 import json
 import logging
-import random
 import shutil
 import sys
-import threading
 import time
 import libfiles as files
-import libledger as ledger
 import liblnd as lnd
 import liblnurl as lnurl
 import libnostr as nostr
@@ -270,12 +266,16 @@ if __name__ == '__main__':
     # Load Lightning ID cache
     nostr.loadLightningIdCache()
 
-    # Connect to relays
-    nostr.connectToRelays()
+    monitordefs = nostr.config["monitor"]
+    if len(monitordefs) == 0:
+        logger.warning("No communities being monitored. Add definitions to monitor field in nostr section of config.json")
+        quit()
 
     duration5minutes = 5 * 60
     while True:
-        monitordefs = nostr.config["monitor"]
+
+        nostr.connectToRelays()
+
         for monitordef in monitordefs:
             ownerPubkey = monitordef["owner"]
             communityID = monitordef["dTag"]
@@ -299,6 +299,8 @@ if __name__ == '__main__':
                     if moderator != approvedPostPubkey:
                         zapModerator(communityATag, moderator, approvalEvent.id, approvedPostID, zapModerators, zapModeratorMsg)
             logger.debug(f"- done checking {communityID}")
+
+        nostr.disconnectRelays()
 
         logger.debug(f"Sleeping {duration5minutes} seconds")
         time.sleep(duration5minutes)
