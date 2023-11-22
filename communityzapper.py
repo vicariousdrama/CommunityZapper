@@ -22,9 +22,9 @@ def getCommunityDefinition(ownerPubkey: str, communityId: str):
     # retrieve events where, kind = 34550, posted by ownerPubkey, and d tag is the community id
     subscription_id = f"my_events_def_{communityId}"
     filter = Filter(kinds=[34550],authors=[ownerPubkey])
+    filter.add_arbitrary_tag("d", [communityId])
     aTag = f"34550:{ownerPubkey}:{communityId}"
-    #filter.add_arbitrary_tag("d", communityId)
-    filter.add_arbitrary_tag("a", aTag)
+    #filter.add_arbitrary_tag("a", [aTag])
     filters = Filters([filter])
     nostr._relayManager.add_subscription(id=subscription_id, filters=filters)
     request = [ClientMessageType.REQUEST, subscription_id]
@@ -71,7 +71,7 @@ def getApprovedEvents(moderatorPubkey: str, communityATag: str):
     t, _ = utils.getTimes()
     subscription_id = f"my_events_approved_{t}"
     filter = Filter(kinds=[4550],authors=[moderatorPubkey])
-    filter.add_arbitrary_tag("a", communityATag)
+    filter.add_arbitrary_tag("a", [communityATag])
     filters = Filters([filter])
     nostr._relayManager.add_subscription(id=subscription_id, filters=filters)
     request = [ClientMessageType.REQUEST, subscription_id]
@@ -147,6 +147,7 @@ def zapPost(communityATag, approvedPostPubkey, approvedPostID, amount, comment):
     if communityATag is None: return
     if approvedPostPubkey is None: return
     if approvedPostID is None: return
+    communityName = communityATag.split(":")[2]
     communityFolder = getCommunityFolder(communityATag)
     filePosts = f"{communityFolder}zappedposts.json"
     # {"pubkey1": ["postA","postD"],"pubkey2":["postB"],"pubkey3":["postC"]}
@@ -166,6 +167,7 @@ def zapPost(communityATag, approvedPostPubkey, approvedPostID, amount, comment):
         approvedPostPubkey, 
         approvedPostID, 
         bech32lnurl)
+    logger.debug(f"Zapping Post by {name} ({lightningId}) {amount} sats in community {communityName}")
     wasZapped = payZap(zapRequest, amount, callback, bech32lnurl)
     if not wasZapped: 
         return
@@ -180,6 +182,7 @@ def zapModerator(communityATag: str, moderator: str, approvalEventId: str, appro
     if moderator is None: return
     if approvalEventId is None: return
     if approvedPostID is None: return
+    communityName = communityATag.split(":")[2]
     communityFolder = getCommunityFolder(communityATag)
     filePosts = f"{communityFolder}zappedmoderators.json"
     # {"postA": ["moderator1", "moderator2"], "postB": ["moderator2"]}
@@ -202,6 +205,7 @@ def zapModerator(communityATag: str, moderator: str, approvalEventId: str, appro
         moderator, 
         approvalEventId, 
         bech32lnurl)
+    logger.debug(f"Zapping moderator {name} ({lightningId}) {amount} sats for approving post in community {communityName}")
     wasZapped = payZap(zapRequest, amount, callback, bech32lnurl)
     if not wasZapped: 
         return
@@ -270,6 +274,7 @@ if __name__ == '__main__':
                 for approvalEvent in approvalEvents:
                     approvedPostPubkey, approvedPostID = parseIDs(approvalEvent)
                     zapPost(communityATag, approvedPostPubkey, approvedPostID, zapContributors, zapContributorMsg)
-                    zapModerator(communityATag, moderator, approvalEvent.id, approvedPostID, zapModerators, zapModeratorMsg)
+                    if moderator != approvedPostPubkey:
+                        zapModerator(communityATag, moderator, approvalEvent.id, approvedPostID, zapModerators, zapModeratorMsg)
 
         time.sleep(duration5minutes)
