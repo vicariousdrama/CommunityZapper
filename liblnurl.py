@@ -46,21 +46,29 @@ def getLNURLPayInfo(identity):
     j = geturl(useTor, url, "{}", {}, "Get LNURL Pay Info")
     return j, url
 
-def isLNURLProviderAllowed(identity):
-    identityParts = identity.split("@")
-    if len(identityParts) != 2: return False
-    domainname = identityParts[1]
+def isDomainAllowed(domainname):
+    if "allowProviders" in config:
+        allowed = config["allowProviders"]
+        if len(allowed) > 0 and domainname not in allowed:
+            return False
     if "denyProviders" in config:
-        if domainname in config["denyProviders"]:
+        denied = config["denyProviders"]
+        if len(denied) > 0 and domainname in denied:
             return False
     return True
 
+def isLNURLProviderAllowed(identity):
+    if identity is None: return False
+    identityParts = identity.split("@")
+    if len(identityParts) != 2: return False
+    domainname = identityParts[1]
+    return isDomainAllowed(domainname)
+
 def isLNURLCallbackAllowed(callback):
-    if "denyProviders" not in config: return True
+    if callback is None: return False
     parseresult = urllib.parse.urlparse(callback)
-    if parseresult.netloc in config["denyProviders"]:
-        return False
-    return True
+    domainname = parseresult.netloc
+    return isDomainAllowed(domainname)
 
 def getInvoiceFromZapRequest(callback, satsToZap, zapRequest, bech32lnurl):
     logger.debug(f"Requesting invoice from LNURL service using zap request")

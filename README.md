@@ -48,6 +48,19 @@ The `monitor` value is another array of definitions representing the communities
 - zapContributors: An amount to zap a poster of a note in the community when their note is approved by a moderator
 - zapContributorMsg: a message to send the pubkey that posted the originating note
 
+A common challenge you may face is identifying the owner pubkey and dTag for a Community you want to reward with zaps.
+
+If you have the user's npub, you can get the hex format by running the following, replacing my sample npub with that of the user you want to use (all on one line)
+
+```sh
+~/.pyenv/communityzapper/bin/python -c 'import libutils; print(libutils.normalizeToHex("npub1yx6pjypd4r7qh2gysjhvjd9l2km6hnm4amdnjyjw3467fy05rf0qfp7kza"))'
+```
+
+you may be able to get the dTag and owner npub for communities by using some of the following web clients:
+- https://nostrudel.ninja
+- https://satellite.earth
+
+
 ### Lightning Configuration
 
 The `lnd` configuration section has these keys

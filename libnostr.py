@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-from collections import OrderedDict
-from datetime import datetime, timedelta
 from nostr.key import PrivateKey, PublicKey
 from nostr.event import Event, EventKind, EncryptedDirectMessage, AuthMessage
 from nostr.filter import Filter, Filters
@@ -9,13 +7,10 @@ from nostr.relay_manager import RelayManager
 import bech32
 import json
 import random
-import re
 import ssl
 import time
 import libfiles as files
 import libutils as utils
-import libledger as ledger
-import liblnd as lnd
 import liblnurl as lnurl
 
 logger = None
@@ -26,11 +21,7 @@ lightningIdCache = {}
 _relayManager = None
 _relayPublishTime = 2.50
 _relayConnectTime = 1.25
-_singleRelayManager = False         # controls whether a separate relay manager for reply/reactions
 _relayReconnectExisting = False     # when  true, locks up in r.check_reconnect
-_relayeventcounter = {}
-_replyDebugMessages = False         # controls whether debug messages send text as user reply
-_replyDebugReactions = True         # controls whether debug messags send caution reaction
 _privkey = None
 _pubkey = None
 _pubkeyhex = None

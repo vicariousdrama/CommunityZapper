@@ -59,11 +59,12 @@ def getCommunityDefinition(ownerPubkey: str, communityId: str):
 
 def getCommunityModeratorList(communityDef: Event):
     moderators = []
-    for tagItem in communityDef.tags:
-        if len(tagItem) < 4: continue
-        if tagItem[0] != 'p': continue
-        if tagItem[3] != 'moderator': continue
-        moderators.append(tagItem[1])
+    if communityDef is not None:
+        for tagItem in communityDef.tags:
+            if len(tagItem) < 4: continue
+            if tagItem[0] != 'p': continue
+            if tagItem[3] != 'moderator': continue
+            moderators.append(tagItem[1])
     return moderators
 
 def getApprovedEvents(moderatorPubkey: str, communityATag: str):
@@ -114,27 +115,33 @@ def parseIDs(event: Event):
 def getZapFields(pubkey, amount):
     callback = None
     bech32lnurl = None
+    errMessage = None
     lightningId, name = nostr.getLightningIdForPubkey(pubkey)
-    valid, _ = nostr.isValidLightningId(lightningId)
+    valid, errMessage = nostr.isValidLightningId(lightningId)
     if valid:
         lnurlPayInfo, lnurlp = lnurl.getLNURLPayInfo(lightningId)
         if lnurl.isLNURLProviderAllowed(lightningId):
-            callback, bech32lnurl, _ = nostr.validateLNURLPayInfo(
+            callback, bech32lnurl, errMessage = nostr.validateLNURLPayInfo(
                 lnurlPayInfo, lnurlp, lightningId, name, amount, pubkey)
-    return lightningId, name, callback,bech32lnurl
+            if not lnurl.isLNURLCallbackAllowed(callback):
+                errMessage = "Callback not allowed"
+        else:
+            errMessage = "Provider not allowed"
+    return lightningId, name, callback, bech32lnurl, errMessage
 
 def payZap(zapRequest, amount, callback, bech32lnurl):
     zapped = False
     invoice = lnurl.getInvoiceFromZapRequest(callback, amount, zapRequest, bech32lnurl)
-    if not lnurl.isValidInvoiceResponse(invoice): return zapped
+    if not lnurl.isValidInvoiceResponse(invoice): return zapped, "INVALID INVOICE"
     paymentRequest = invoice["pr"]
     decodedInvoice = lnd.decodeInvoice(paymentRequest)
     lnd.recordPaymentDestination(decodedInvoice)
-    if not lnurl.isValidInvoiceAmount(decodedInvoice, amount): return zapped
+    if not lnurl.isValidInvoiceAmount(decodedInvoice, amount): return zapped, "INVALID AMOUNT"
     paymentTime, paymentTimeISO = utils.getTimes()
     paymentStatus, paymentFees, paymentHash, paymentIndex = lnd.payInvoice(paymentRequest)
+    # todo: for a paid service, this would need to track all paid amounts and follow up on payment status
     zapped = True
-    return zapped
+    return zapped, paymentStatus
 
 def getCommunityFolder(communityATag):
     parts = communityATag.split(":")
@@ -155,10 +162,16 @@ def zapPost(communityATag, approvedPostPubkey, approvedPostID, amount, comment):
     pubkeyPosts = [] if approvedPostPubkey not in posts.keys() else posts[approvedPostPubkey]
     if approvedPostID in pubkeyPosts:
         # already zapped, dont zap again
+        logger.debug("- skipping post zapped previously")
         return
     
-    lightningId,name,callback,bech32lnurl = getZapFields(approvedPostPubkey, amount)
-    if lightningId is None or name is None or callback is None or bech32lnurl is None:
+    lightningId,name,callback,bech32lnurl,errMessage = getZapFields(approvedPostPubkey, amount)
+    if lightningId is None or name is None or callback is None or bech32lnurl is None or errMessage is not None:
+        logger.debug(f"- skipping zap due to error: {errMessage}")
+        logger.debug(f"  lightningId: {lightningId}")
+        logger.debug(f"  name: {name}")
+        logger.debug(f"  callback: {callback}")
+        logger.debug(f"  bech32lnurl: {bech32lnurl}")
         return
     zapRequest = nostr.makeZapRequest(
         nostr.getPrivateKey(), 
@@ -167,10 +180,10 @@ def zapPost(communityATag, approvedPostPubkey, approvedPostID, amount, comment):
         approvedPostPubkey, 
         approvedPostID, 
         bech32lnurl)
-    logger.debug(f"Zapping Post by {name} ({lightningId}) {amount} sats in community {communityName}")
-    wasZapped = payZap(zapRequest, amount, callback, bech32lnurl)
+    logger.debug(f"- zapping post by {name} ({lightningId}) {amount} sats in community {communityName}")
+    wasZapped, paymentStatus = payZap(zapRequest, amount, callback, bech32lnurl)
     if not wasZapped: 
-        return
+        logger.debug(f"- post wasn't zapped due to error: {paymentStatus}")
     
     # save it
     pubkeyPosts.append(approvedPostID)
@@ -190,13 +203,19 @@ def zapModerator(communityATag: str, moderator: str, approvalEventId: str, appro
     moderators = [] if approvalEventId not in posts.keys() else posts[approvalEventId]
     if moderator in moderators:
         # already zapped, dont zap again
+        logger.debug("- skipping approval zapped previously")
         return
     # determine amount to zap based on array (earlier moderators generally rewarded more)
     amountIdx = len(moderators)
     amount = amounts[amountIdx] if amountIdx < len(amounts) else amounts[-1]
 
-    lightningId,name,callback,bech32lnurl = getZapFields(moderator, amount)
-    if lightningId is None or name is None or callback is None or bech32lnurl is None:
+    lightningId,name,callback,bech32lnurl,errMessage = getZapFields(moderator, amount)
+    if lightningId is None or name is None or callback is None or bech32lnurl is None or errMessage is not None:
+        logger.debug(f"- skipping zap due to error: {errMessage}")
+        logger.debug(f"  lightningId: {lightningId}")
+        logger.debug(f"  name: {name}")
+        logger.debug(f"  callback: {callback}")
+        logger.debug(f"  bech32lnurl: {bech32lnurl}")
         return
     zapRequest = nostr.makeZapRequest(
         nostr.getPrivateKey(), 
@@ -205,10 +224,10 @@ def zapModerator(communityATag: str, moderator: str, approvalEventId: str, appro
         moderator, 
         approvalEventId, 
         bech32lnurl)
-    logger.debug(f"Zapping moderator {name} ({lightningId}) {amount} sats for approving post in community {communityName}")
-    wasZapped = payZap(zapRequest, amount, callback, bech32lnurl)
+    logger.debug(f"- zapping moderator {name} ({lightningId}) {amount} sats for approving post in community {communityName}")
+    wasZapped, paymentStatus = payZap(zapRequest, amount, callback, bech32lnurl)
     if not wasZapped: 
-        return
+        logger.debug(f"- post wasn't zapped due to error: {paymentStatus}")
 
     # save it
     moderators.append(moderator)
@@ -260,6 +279,7 @@ if __name__ == '__main__':
         for monitordef in monitordefs:
             ownerPubkey = monitordef["owner"]
             communityID = monitordef["dTag"]
+            logger.debug(f"Processing {communityID} by {ownerPubkey}")
             zapModerators = [21] if "zapModerators" not in monitordef else monitordef["zapModerators"]
             zapModeratorMsg = "Thanks for moderating!" if "zapModeratorMsg" not in monitordef else monitordef["zapModeratorMsg"]
             zapContributors = 21 if "zapContributors" not in monitordef else monitordef["zapContributors"]
@@ -271,10 +291,14 @@ if __name__ == '__main__':
             moderators = getCommunityModeratorList(communityDef)
             for moderator in moderators:
                 approvalEvents = getApprovedEvents(moderator, communityATag)
+                approvalCount = len(approvalEvents)
+                logger.debug(f"- {approvalCount} approved events by {moderator}")
                 for approvalEvent in approvalEvents:
                     approvedPostPubkey, approvedPostID = parseIDs(approvalEvent)
                     zapPost(communityATag, approvedPostPubkey, approvedPostID, zapContributors, zapContributorMsg)
                     if moderator != approvedPostPubkey:
                         zapModerator(communityATag, moderator, approvalEvent.id, approvedPostID, zapModerators, zapModeratorMsg)
+            logger.debug(f"- done checking {communityID}")
 
+        logger.debug(f"Sleeping {duration5minutes} seconds")
         time.sleep(duration5minutes)

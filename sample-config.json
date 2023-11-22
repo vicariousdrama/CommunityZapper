@@ -13,7 +13,14 @@
             {"url": "wss://nostr.wine", "read": true, "write": false}
         ],
         "monitor": [
-            {"owner": "026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27", "dTag":"Outdoors", "zapModerators": [21,19,17,13,11,7,5,3,2,1], "zapModeratorMsg": "Thanks for moderating!", "zapContributors": 100, "zapContributorMsg": "Thanks for sharing with the community!"}
+            {
+                "owner": "026d8b7e7bcc2b417a84f10edb71b427fe76069905090b147b401a6cf60c3f27", 
+                "dTag":"Outdoors", 
+                "zapModerators": [21,19,17,13,11,7,5,3,2,1], 
+                "zapModeratorMsg": "Thanks for moderating!", 
+                "zapContributors": 100, 
+                "zapContributorMsg": "Thanks for sharing with the community!"
+            }
         ]
     },
     "lnd": {
@@ -62,7 +69,9 @@
         "readTimeout": 30,
         "denyProviders.comment": "Domains for which zaps will not be paid",
         "denyProviders": [
-            "zeuspay.com"
+        ],
+        "allowProviders.comment": "The only domains for which zaps will be paid",
+        "allowProviders": [
         ]
     }
 }
