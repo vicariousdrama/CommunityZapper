@@ -703,8 +703,8 @@ def validateLNURLPayInfo(lnurlPayInfo, lnurlp, lightningId, name, amount, pubkey
         logger.debug(f"LN Provider for {lightningId} does not have proper callback, minSendable, or maxSendable info.")
         userMessage = f"LN Provider for {lightningId} does not provide expected response format"
         return callback, bech32lnurl, userMessage
-    minSendable = lnurlPayInfo["minSendable"]
-    maxSendable = lnurlPayInfo["maxSendable"]
+    minSendable = int(lnurlPayInfo["minSendable"])
+    maxSendable = int(lnurlPayInfo["maxSendable"])
     if (amount * 1000) < minSendable:
         logger.debug(f"LN Provider for {lightningId} does not allow zaps less than {minSendable} msat.")
         userMessage = f"LN Provider for {lightningId} requires {minSendable} msats minimum to be zapped"
