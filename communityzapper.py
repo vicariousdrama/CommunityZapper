@@ -4,6 +4,7 @@ from nostr.filter import Filter, Filters
 from nostr.message_type import ClientMessageType
 import json
 import logging
+import random
 import shutil
 import sys
 import time
@@ -63,11 +64,11 @@ def getCommunityModeratorList(communityDef: Event):
             moderators.append(tagItem[1])
     return moderators
 
-def getApprovedEvents(moderatorPubkey: str, communityATag: str):
+def getApprovedEvents(moderatorPubkey: str, communityATag: str, since: int, until: int):
     # retrieve events where, kind = 4550, posted by moderatorPubkey, and a tag is the communityATag
     t, _ = utils.getTimes()
     subscription_id = f"my_events_approved_{t}"
-    filter = Filter(kinds=[4550],authors=[moderatorPubkey])
+    filter = Filter(kinds=[4550],authors=[moderatorPubkey],since=since,until=until)
     filter.add_arbitrary_tag("a", [communityATag])
     filters = Filters([filter])
     nostr._relayManager.add_subscription(id=subscription_id, filters=filters)
@@ -146,6 +147,14 @@ def getCommunityFolder(communityATag):
     communityFolder = f"{files.dataFolder}communities/{name}/{pubkey}/"
     return communityFolder
 
+def recordPayment(purpose, communityATag, pubkey, approvedPostID, amount):
+    if communityATag is None: return
+    communityName = communityATag.split(":")[2]
+    filePayments = f"{communityFolder}payments.json"
+    payments = files.loadJsonFile(filePayments, [])
+    payments.append({"purpose":purpose,"community":communityName,"pubkey":pubkey,"postid":approvedPostID,"amount":amount})
+    files.saveJsonFile(filePayments, payments)
+
 def zapPost(communityATag, approvedPostPubkey, approvedPostID, amount, comment):
     if communityATag is None: return
     if approvedPostPubkey is None: return
@@ -180,7 +189,9 @@ def zapPost(communityATag, approvedPostPubkey, approvedPostID, amount, comment):
     wasZapped, paymentStatus = payZap(zapRequest, amount, callback, bech32lnurl)
     if not wasZapped: 
         logger.debug(f"- post wasn't zapped due to error: {paymentStatus}")
-    
+
+    recordPayment("zapped post", communityATag, approvedPostPubkey, approvedPostID, amount)
+
     # save it
     pubkeyPosts.append(approvedPostID)
     posts[approvedPostPubkey] = pubkeyPosts
@@ -224,6 +235,8 @@ def zapModerator(communityATag: str, moderator: str, approvalEventId: str, appro
     wasZapped, paymentStatus = payZap(zapRequest, amount, callback, bech32lnurl)
     if not wasZapped: 
         logger.debug(f"- post wasn't zapped due to error: {paymentStatus}")
+
+    recordPayment("zapped moderator", communityATag, moderator, approvedPostID, amount)
 
     # save it
     moderators.append(moderator)
@@ -271,12 +284,22 @@ if __name__ == '__main__':
         logger.warning("No communities being monitored. Add definitions to monitor field in nostr section of config.json")
         quit()
 
-    duration5minutes = 5 * 60
+    duration1hour = 1 * 60 * 60
     while True:
 
         nostr.connectToRelays()
 
         for monitordef in monitordefs:
+            randomZapEnabled = False
+            randomZap = 0
+            if "enabled" in monitordef:
+                if not monitordef["enabled"]:
+                    continue
+            since = 1672531200
+            until, _ = utils.getTimes()
+            if "since" in monitordef: since = monitordef["since"]
+            if "until" in monitordef: until = monitordef["until"]
+            if "randomZap" in monitordef: randomZap = monitordef["randomZap"]
             ownerPubkey = monitordef["owner"]
             communityID = monitordef["dTag"]
             logger.debug(f"Processing {communityID} by {ownerPubkey}")
@@ -290,17 +313,26 @@ if __name__ == '__main__':
             communityDef = getCommunityDefinition(ownerPubkey, communityID)
             moderators = getCommunityModeratorList(communityDef)
             for moderator in moderators:
-                approvalEvents = getApprovedEvents(moderator, communityATag)
+                approvalEvents = getApprovedEvents(moderator, communityATag, since, until)
                 approvalCount = len(approvalEvents)
                 logger.debug(f"- {approvalCount} approved events by {moderator}")
                 for approvalEvent in approvalEvents:
                     approvedPostPubkey, approvedPostID = parseIDs(approvalEvent)
-                    zapPost(communityATag, approvedPostPubkey, approvedPostID, zapContributors, zapContributorMsg)
+                    zapAmount = zapContributors
+                    if randomZapEnabled:
+                        if random.randint(1,21) == 21:
+                            logger.debug(f"Random Hit! Changing amount to {randomZap}")
+                            zapAmount = randomZap
+                    zapPost(communityATag, approvedPostPubkey, approvedPostID, zapAmount, zapContributorMsg)
                     if moderator != approvedPostPubkey:
-                        zapModerator(communityATag, moderator, approvalEvent.id, approvedPostID, zapModerators, zapModeratorMsg)
+                        zapAmounts = zapModerators
+                        if random.randint(1,21) == 21:
+                            logger.debug(f"Random Hit! Changing amount to {randomZap}")
+                            zapAmounts = [randomZap]
+                        zapModerator(communityATag, moderator, approvalEvent.id, approvedPostID, zapAmounts, zapModeratorMsg)
             logger.debug(f"- done checking {communityID}")
 
         nostr.disconnectRelays()
 
-        logger.debug(f"Sleeping {duration5minutes} seconds")
-        time.sleep(duration5minutes)
+        logger.debug(f"Sleeping {duration1hour} seconds")
+        time.sleep(duration1hour)

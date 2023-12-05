@@ -84,16 +84,24 @@ if __name__ == '__main__':
         logger.warning("No communities were found on relays.")
         quit()
 
+    mkey = None
+    mkeyCommunities = []
+    if len(sys.argv) > 1: mkey = sys.argv[1]
+
     for communityDef in communityDefs:
         communityDTag = ""
         communityDescription = ""
         communityName = ""
         communityOwner = communityDef.public_key
+        moderators = []
         for tagItem in communityDef.tags:
             if len(tagItem) < 2: continue
             if tagItem[0] == 'd': communityDTag = tagItem[1]
             if tagItem[0] == 'description': communityDescription = tagItem[1]
             if tagItem[0] == 'name': communityName = tagItem[1]
+            if tagItem[0] == 'p': 
+                 if len(tagItem) >= 4 and tagItem[3] == 'moderator':
+                      moderators.append(tagItem[1])                          
         if len(communityName) == 0: communityName = communityDTag
         communityATag = f"34550:{communityOwner}:{communityDTag}"
         logger.debug("---")
@@ -102,3 +110,15 @@ if __name__ == '__main__':
         logger.debug(f"  owner:       {communityOwner}")
         logger.debug(f"  dTag:        {communityName}")
         logger.debug(f"  aTag:        {communityATag}")
+        for moderator in moderators:
+            logger.debug(f"  moderator:   {moderator}")
+            if mkey is not None and mkey == moderator:
+                mkeyCommunities.append(communityATag)
+        
+        if mkey is not None and len(mkeyCommunities) > 0:
+            logger.debug("==============================================")
+            logger.debug(f"Communities moderated by {mkey}")
+            logger.debug("----------------------------------------------")
+            for c in mkeyCommunities:
+                logger.debug(c)
+
