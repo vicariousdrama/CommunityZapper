@@ -110,6 +110,9 @@ def isValidInvoiceResponse(invoiceResponse):
 
 def isValidInvoiceAmount(decodedInvoice, amountToZap):
     logger.debug(f"Checking if invoice is valid")
+    if decodedInvoice is None:
+        logger.warning(f"Invoice is none")
+        return False
     amountMillisatoshi = amountToZap*1000
     if not all(k in decodedInvoice for k in ("num_satoshis","num_msat")): 
         logger.warning(f"Invoice did not set amount")

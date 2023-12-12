@@ -334,6 +334,7 @@ def getPaymentDestinationFilename():
     return filename
 
 def recordPaymentDestination(decodedInvoice):
+    if decodedInvoice is None: return
     if not all(k in decodedInvoice for k in ("destination","num_satoshis","num_msat")): 
         return
     destination_pubkey = decodedInvoice["destination"]

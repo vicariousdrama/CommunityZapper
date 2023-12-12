@@ -129,9 +129,12 @@ def getZapFields(pubkey, amount):
 def payZap(zapRequest, amount, callback, bech32lnurl):
     zapped = False
     invoice = lnurl.getInvoiceFromZapRequest(callback, amount, zapRequest, bech32lnurl)
-    if not lnurl.isValidInvoiceResponse(invoice): return zapped, "INVALID INVOICE"
+    if not lnurl.isValidInvoiceResponse(invoice): 
+        return zapped, "INVALID INVOICE"
     paymentRequest = invoice["pr"]
     decodedInvoice = lnd.decodeInvoice(paymentRequest)
+    if decodedInvoice is None:
+        return zapped, f"COULD NOT GET DECODED INVOICE from {paymentRequest}"
     lnd.recordPaymentDestination(decodedInvoice)
     if not lnurl.isValidInvoiceAmount(decodedInvoice, amount): return zapped, "INVALID AMOUNT"
     paymentTime, paymentTimeISO = utils.getTimes()
@@ -295,7 +298,9 @@ if __name__ == '__main__':
             if "enabled" in monitordef:
                 if not monitordef["enabled"]:
                     continue
-            since = 1672531200
+            # 2023-01-01    1672531200
+            # 2023-12-01    1701388800
+            since = 1701388800
             until, _ = utils.getTimes()
             if "since" in monitordef: since = monitordef["since"]
             if "until" in monitordef: until = monitordef["until"]
